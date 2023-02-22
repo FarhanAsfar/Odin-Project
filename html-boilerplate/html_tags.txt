@@ -1,0 +1,5 @@
+1. Paragraph ---- <p></P>
+2. Bold ---- <strong></strong>
+3. Italic ---- <em></em>
+4. Comment ---- <!--comment line -->
+
