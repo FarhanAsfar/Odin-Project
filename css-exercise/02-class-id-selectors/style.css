@@ -1,6 +1,6 @@
 .odd{
-    background-color: rgb(red, green, blue);
-    font-family: Verdana, "DejaVu Sans", sans-serif;
+    background-color: pink;
+    font-family: Verdana;
 }
 
 .adjust-font-size {
@@ -10,10 +10,11 @@
 #two{
     color: blue;
     font-size: 36px;
+    font-weight: bold;
 }
 
 #four{
-    background-color: hsl(hue, saturation, lightness);
+    background-color: lightgreen;
     font-weight: bold;
 }
 
