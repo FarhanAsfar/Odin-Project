@@ -16,7 +16,7 @@
 
 .b1,
 .b2{
-    font-size: 32px; /*by grouping the b1&b2 class, we can make same change for both class*/
+    font-size: 32px; /*by grouping the b1&b2 class, we can make same change for both the classes*/
 }
 
 .b1{
