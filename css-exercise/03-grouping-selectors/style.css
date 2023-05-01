@@ -1,9 +1,9 @@
-#b1{
+.b1{
     background-color: black;
     font-family: monospace;
 }
 
-#b2{
+.b2{
     background-color: yellow;
     color: white;
 }
