@@ -8,7 +8,7 @@ body{
   font-weight: 800;
 }
 
-.small-para {
+.para.small-para {      /* added '.para' before '.small-para' which will have higher specificity for more number of classes */
   font-size: 14px;
   font-weight: 800;
 }
