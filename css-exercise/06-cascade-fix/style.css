@@ -17,7 +17,7 @@ body{
   font-size: 22px;
 }
 
-.confirm {
+.button.confirm {       /* added '.button' before '.confirm', now it will have higher specificity */
   background: green;
   color: white;
   font-weight: bold;
