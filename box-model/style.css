@@ -1,0 +1,23 @@
+p, 
+ul {
+  border: 2px solid rebeccapurple;
+}
+
+span{
+  border: 2px solid yellow;
+}
+
+
+li {
+  border: 2px solid green;
+}
+
+ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+} 
+
+.inline {
+  display: inline-flex;
+}
