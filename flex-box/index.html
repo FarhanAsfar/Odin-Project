@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <title>Flexbox</title>
 
     <style>
-        .container{
+        .container {
             border: 2px solid blue;
             display: flex;
             height: 50vh;
@@ -15,26 +16,34 @@
             align-items: center;
             flex-wrap: wrap;
 
-            align-content: center; 
+            align-content: center;
             row-gap: 30px;
             column-gap: 10px;
 
         }
-        .item{
+
+        .item {
             height: 60px;
             width: 60px;
             background-color: yellow;
             border: 2px solid cyan;
             /* margin: 5px; */
-            
+
+            flex-grow: 1; /* take the full container width */
+        }
+
+        .item1{
+            flex-grow: 6;
         }
     </style>
 
 </head>
+
 <body>
 
     <main>
         <div class="container">
+            <div class="item item1">1</div>
             <div class="item"></div>
             <div class="item"></div>
             <div class="item"></div>
@@ -42,34 +51,10 @@
             <div class="item"></div>
             <div class="item"></div>
             <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
+        
         </div>
     </main>
-    
+
 </body>
+
 </html>
