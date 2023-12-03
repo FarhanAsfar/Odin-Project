@@ -1,0 +1,14 @@
+.navbar .container{
+    display: flex;
+    border: 2px solid green;
+    row-gap: 40px;
+    column-gap: 30px;
+
+}
+
+.container .hac{
+    column-gap: 30px;
+    display: flex;
+    border: 3px solid red;
+    justify-content: space-between;
+}
