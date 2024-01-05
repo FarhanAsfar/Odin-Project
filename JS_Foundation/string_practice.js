@@ -25,6 +25,8 @@ let text6 = text5.toLowerCase();  //convert string to lower case
 console.log(text4);
 console.log(text6);
 
+console.log(text5);
+console.log(text6);
 
 //concat string
 let string1 = "java";
