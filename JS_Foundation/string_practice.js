@@ -50,7 +50,7 @@ let number = '5';
 let padd = number.padEnd(4,"0"); //pad string to another string until reaches given length.
 console.log(padd);
 
-let num1 = 5; //number, convert it to string before using pad method
+let num1 = 5; //number, convert it into string before using 'pad' method
 let num = num1.toString();
 let padded = num.padStart(4, "*");
 console.log(padded);
