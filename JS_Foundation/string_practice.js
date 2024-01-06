@@ -47,11 +47,11 @@ console.log(string4+"\n"+string5+"\n"+string6);
 
 //string pad
 let number = '5';
-let padd = number.padStart(4,"0"); //pad string to another string until reaches given length.
+let padd = number.padEnd(4,"0"); //pad string to another string until reaches given length.
 console.log(padd);
 
 let num1 = 5; //number, convert it to string before using pad method
 let num = num1.toString();
-let padded = num.padEnd(4, "*");
+let padded = num.padStart(4, "*");
 console.log(padded);
 
