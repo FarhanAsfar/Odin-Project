@@ -1,6 +1,8 @@
 let text = 'apple, banana, kkx';
 let part = text.substring(7,13); 
 
+console.log(part);
+
 let part1 = text.substring(7);
 let part2 = text.substring(-4);
 
