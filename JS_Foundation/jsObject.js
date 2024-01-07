@@ -5,3 +5,7 @@ let student = {
 }
 
 console.log(student);
+
+student.semester = "Fall2023"; //adding new key to the object 'student'
+
+console.log(student);
