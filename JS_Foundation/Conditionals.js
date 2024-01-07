@@ -30,3 +30,12 @@ if(a === c){  // '===' will check the data type when comparing variables
 }else{
     console.log('false ' +a +' is not equal to '+ c);
 }
+
+
+
+//ternary operator
+let x = 10;
+let y = 25;
+
+let z = x>y ?(x-y):(y-x); //if x is greater than y then execute (x-y) otherwise execute (y-x).
+console.log(z);
