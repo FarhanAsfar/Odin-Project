@@ -16,11 +16,12 @@
    flex: 1 1 auto;
 }
 
-.flex-container1 .f1{
+.flex-container1 .f1, .f2{
+  margin: 10px;
   flex-shrink: 0;
   background-color: bisque;
 }
- 
+
  /* this selector selects all divs inside of .flex-container */
  .flex-container div {
    background: cadetblue;
