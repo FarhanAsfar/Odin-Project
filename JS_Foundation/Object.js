@@ -9,3 +9,12 @@ console.log(student);
 student.semester = "Fall2023"; //adding new key to the object 'student'
 
 console.log(student);
+
+
+let faculty = {
+    "name": "RDA",
+    "department": "CSE",
+    "salary": "120k"
+}
+
+console.log(faculty);
