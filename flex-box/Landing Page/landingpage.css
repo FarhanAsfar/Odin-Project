@@ -1,0 +1,19 @@
+.first-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar{
+    display: flex;
+    background: #1F2937;
+    color: white;
+}
+
+.logo{
+    display: flex;
+}
+
+.links{
+    display: flex;   
+}
+
