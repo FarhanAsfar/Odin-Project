@@ -5,17 +5,22 @@
 }
 
 .navbar{
+    margin-left: 40px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     background: #1F2937;
     color: white;
 }
 
-.logo{
-    display: flex;
+.logo h3{
+    margin: 0;
 }
 
-.links{
-    display: flex;
+a{
+    text-decoration: none;
+    color: grey;
 }
 
 
