@@ -18,7 +18,12 @@
     margin: 0;
 }
 
-a{
+.links{
+    display: flex;
+}
+
+.links a{
+    margin: 0 15px;
     text-decoration: none;
     color: grey;
 }
