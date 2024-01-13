@@ -39,17 +39,21 @@
     align-items: center;
 }
 
-.preview h1{
+h1{
     color: white;
     font-size: 48px;
 }
 
-.preview p{
+p{
     color: #E5E7EB;
     font-size: 18px;
 }
 
-.image{
+
+.image image{
+    max-width: 100%;
+    height: auto;
+    text-align: center;
     width: 600px;
 }
 
