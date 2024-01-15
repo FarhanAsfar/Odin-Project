@@ -64,6 +64,7 @@ button{
     font-weight: bold;
     background-color: #3882F6;
     border: none;
+    border-radius: 6px;
 }
 
 
