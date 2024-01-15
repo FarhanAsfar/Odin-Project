@@ -60,6 +60,8 @@ p{
 button{
     padding: 10px;
     cursor: pointer;
+    color: black;
+    background-color: #3882F6;
 }
 
 
