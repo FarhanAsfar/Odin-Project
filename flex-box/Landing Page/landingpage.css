@@ -68,6 +68,14 @@ button{
 }
 
 
+.second-section{
+    display: flex;
+    background: cyan;
+    border: 4px;
+    border-color: green;
+}
+
+
 
 
 
