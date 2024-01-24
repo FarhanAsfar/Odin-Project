@@ -35,7 +35,7 @@ console.log(newString);
 
 //string trim
 let string3 = "    hello world      ";
-let string4 = string3;
+let string4 = string3.trimStart();
 let string5 = string3.trimEnd();
 let string6 = string3.trim();
 console.log(string4+"\n"+string5+"\n"+string6);
