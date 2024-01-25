@@ -57,7 +57,7 @@ p{
     width: 600px;
 }
 
-button{
+.paragraph button{
     padding: 10px;
     cursor: pointer;
     color: white;
@@ -133,6 +133,24 @@ button{
     text-align: right;
     margin-top: 10px;
     font-weight: bold;
+}
+
+
+
+.fourth-section{
+    display: flex;
+    border: 3px solid blue;
+    justify-content: center;
+}
+
+.f-second{
+    display: flex;
+    margin-block: 50px;
+    height: 100px;
+    width: 900px;
+    align-items: center;
+    justify-content: space-around;
+    background: #3882F6;
 }
 
 
