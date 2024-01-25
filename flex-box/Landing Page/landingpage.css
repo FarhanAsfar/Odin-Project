@@ -72,7 +72,7 @@ button{
     display: flex;
     flex-direction: column;
     background: white;
-    border: 4px solid black;
+    
 }
 
 .head-h2{
