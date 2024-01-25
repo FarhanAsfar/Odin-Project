@@ -106,6 +106,24 @@ button{
 }
 
 
+.third-section{
+    display: flex;
+    border: 3px solid green;
+    justify-content: center;
+}
+
+.quote{
+    display: flex;
+    margin-block: 40px;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+.quote p{
+    word-wrap: break-word;
+}
+
+
 
 
 
