@@ -109,19 +109,27 @@ button{
 .third-section{
     display: flex;
     border: 3px solid green;
-    justify-content: center;
+    
 }
 
-.quote{
-    display: flex;
+.quote-container{
+    border: 2px solid cyan;
     margin-block: 40px;
-    padding: 10px;
-    margin-left: 50px;
+    margin-left: 90px;
+    margin-right: 90px;
+    padding: 20px;
+    max-width: 900px;
+    text-align: justify;
 }
 
 .quote p{
-    word-wrap: break-word;
+    font-style: italic;
 }
+.author{
+    text-align: right;
+    margin-top: 10px;
+}
+
 
 
 
