@@ -139,7 +139,6 @@ p{
 
 .fourth-section{
     display: flex;
-    border: 3px solid blue;
     justify-content: center;
 }
 
