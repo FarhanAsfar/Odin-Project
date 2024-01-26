@@ -154,6 +154,11 @@ p{
 
 .signup-btn button{
     border-radius: 4px;
+    width: 80px;
+    background: #3882F6;
+    border-color: white;
+    font-weight: bold;
+    color: white;
 }
 
 
