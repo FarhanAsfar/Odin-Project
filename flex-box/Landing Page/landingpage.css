@@ -152,6 +152,9 @@ p{
     justify-content: space-around;
     background: #3882F6;
 }
+.f-second, .action{
+    border-radius: 5px;
+}
 
 .signup-btn button{
     border-radius: 4px;
@@ -161,6 +164,7 @@ p{
     font-weight: bold;
     color: white;
     padding: 3px;
+    cursor:pointer;
 }
 
 
