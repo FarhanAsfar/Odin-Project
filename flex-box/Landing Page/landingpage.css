@@ -140,6 +140,7 @@ p{
 .fourth-section{
     display: flex;
     justify-content: center;
+    height: 200px;
 }
 
 .f-second{
