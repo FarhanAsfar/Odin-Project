@@ -167,6 +167,15 @@ p{
     cursor:pointer;
 }
 
+.fifth-section{
+    display: flex;
+    background: #1F2937;
+    justify-content: center;
+}
+
+.fifth-section p{
+    font-size: 15px;
+}
 
 
 
