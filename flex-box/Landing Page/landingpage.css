@@ -71,8 +71,7 @@ p{
 .second-section{
     display: flex;
     flex-direction: column;
-    background: white;
-    
+    background: white;  
 }
 
 .head-h2{
@@ -87,7 +86,6 @@ p{
     display: flex;
     justify-content: center;
 }
-
 
 .card{
     display: flex;
@@ -104,7 +102,6 @@ p{
 .card p{
     word-wrap: break-word;
 }
-
 
 .third-section{
     display: flex;
@@ -129,13 +126,12 @@ p{
 .quote p{
     font-style: italic;
 }
+
 .author{
     text-align: right;
     margin-top: 10px;
     font-weight: bold;
 }
-
-
 
 .fourth-section{
     display: flex;
