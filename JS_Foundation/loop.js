@@ -10,7 +10,18 @@ let identity = {
     dept: 'cse'
 }
 
-for (const key in identity) { //for-in loop
+for (const key in identity) { //for-in loop (loops through an object)
         const element = identity[key];
         console.log(key+':'+element);
 }
+
+for (const iterator of 'farhan') { //for-of loop
+    console.log(iterator);
+}
+
+let i = 5;
+while (i<=10) {
+    console.log(i*10);
+    i++;
+}
+
