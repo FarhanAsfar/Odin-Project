@@ -19,7 +19,7 @@ console.log(result);
 
 //arrow function
 
-let sum = (a,b) =>a+b;
+let sum = (a,b) =>a+b; //function to add 2 numbers.
 //sum -> function name
 //(a,b) -> arguments
 //(a+b) -> expression
