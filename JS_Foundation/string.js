@@ -64,3 +64,6 @@ console.log(s1.slice(5,10)); //5th index will not be included but 10th index wil
 
 //replace
 console.log(s1.replace('block', 'gold')); //only the first occurence of 'block' will be changed.
+
+//concat
+console.log(s1.concat(' is the future'));
