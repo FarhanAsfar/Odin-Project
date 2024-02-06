@@ -63,4 +63,4 @@ let s1 = 'blockchain';
 console.log(s1.slice(5,10)); //5th index will not be included but 10th index will be included.
 
 //replace
-console.log(s1.replace('block', 'gold'));
+console.log(s1.replace('block', 'gold')); //only the first occurence of 'block' will be changed.
