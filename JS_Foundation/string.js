@@ -57,3 +57,9 @@ console.log(paddEnd);
 let name = 'FAR';
 let address = 'Khilgaon';
 console.log(`Student name is ${name} and address is ${address}`);
+
+//String Slice
+let s1 = 'blockchain';
+console.log(s1.slice(5,10)); //5th index will not be included but 10th index will be included.
+
+
