@@ -52,3 +52,7 @@ let padded = num.padEnd(4, "*");
 console.log(padded);
 
 
+let name = 'FAR';
+let address = 'Khilgaon';
+
+console.log(`Student name is ${name} and address is ${address}`);
