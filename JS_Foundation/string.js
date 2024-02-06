@@ -48,11 +48,12 @@ console.log(padd);
 
 let num1 = 5; //number, convert it to string before using pad method
 let num = num1.toString();
-let padded = num.padEnd(4, "*");
-console.log(padded);
+let paddEnd = num.padEnd(4, "*");
+let paddStart = num.padStart(4, "*");
+console.log(paddStart);
+console.log(paddEnd);
 
-
+//template literal
 let name = 'FAR';
 let address = 'Khilgaon';
-
 console.log(`Student name is ${name} and address is ${address}`);
