@@ -27,7 +27,7 @@ console.log(sum(2,3));
 
 
 let age = 23;
-let welcome = (age<20)?
+let welcome = (age<20)? //condition to check age
 () => console.log("Hello!"):
 () => console.log("Greetings!");
 
