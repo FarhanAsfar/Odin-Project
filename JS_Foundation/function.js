@@ -32,3 +32,12 @@ let welcome = (age<20)? //condition to check age
 () => console.log("Greetings!");
 
 welcome();
+
+function operation(a, b){
+    let plus = a+b;
+    let minus = a-b;
+    let multi = a*b;
+    let divide = a/b;
+
+    console.log('+: '+plus+'\n'+'-: '+minus+'\n'+'*: '+multi+'\n'+'/: '+divide);
+}
