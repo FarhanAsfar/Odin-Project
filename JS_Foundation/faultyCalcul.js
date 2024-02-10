@@ -22,7 +22,7 @@ function wrongOperation(a, b){
 
 let a = 10;
 let b = 5;
-let rand = Math.random();
+let rand = Math.random(); //taking random number to choose a function
 //console.log(rand);
 
 if(rand>0.3){
