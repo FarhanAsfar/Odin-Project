@@ -42,5 +42,5 @@ function operation(a, b){
     console.log('+: '+plus+'\n'+'-: '+minus+'\n'+'*: '+multi+'\n'+'/: '+divide);
 }
 let a = 10;
-let b = 20;
+let b = 30;
 operation(a,b);
