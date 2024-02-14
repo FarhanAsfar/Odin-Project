@@ -26,7 +26,7 @@ let rand = Math.random(); //taking random number to choose a function
 //console.log(rand);
 
 if(rand>0.3){
-    rightOperation(a,b);
-}else{
     wrongOperation(a,b);
+}else{
+    rightOperation(a,b);
 }
