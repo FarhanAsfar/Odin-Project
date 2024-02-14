@@ -11,10 +11,10 @@ function rightOperation(a, b){
 }
 
 function wrongOperation(a, b){
-    let plus = a*b;
-    let minus = a/b;
-    let multi = a+b;
-    let divide = a-b;
+    let plus = a/b;
+    let minus = a*b;
+    let multi = a-b;
+    let divide = a+b;
 
     console.log('+: '+plus+'\n'+'-: '+minus+'\n'+'*: '+multi+'\n'+'/: '+divide);
 }
