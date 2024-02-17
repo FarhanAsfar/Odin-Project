@@ -5,3 +5,9 @@ content.classList.add('content');
 content.textContent = 'This is the glorious text-content!';
 
 container.appendChild(content);
+
+const para = document.createElement('div');
+para.classList.add('red');
+para.textContent = 'This para is written using DOM!';
+
+container.appendChild(para);
