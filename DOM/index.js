@@ -15,3 +15,11 @@ container.appendChild(para);
 const redPara = document.querySelector('.red');
 redPara.style.color = 'red';
 
+
+
+const head = document.createElement('h3');
+head.classList.add('heading');
+head.textContent = `I'm a blue h3`;
+container.appendChild(head);
+const hBlue = document.querySelector('.heading');
+hBlue.style.color = 'blue';
