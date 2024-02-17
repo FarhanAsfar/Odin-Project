@@ -11,3 +11,7 @@ para.classList.add('red');
 para.textContent = 'This para is written using DOM!';
 
 container.appendChild(para);
+
+const redPara = document.querySelector('.red');
+redPara.style.color = 'red';
+
