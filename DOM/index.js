@@ -34,3 +34,9 @@ newDiv.appendChild(hDiv);
 newDiv.appendChild(pDiv);
 
 container.appendChild(newDiv);
+
+const eStyle = document.querySelector('.elements');
+eStyle.style.background = 'pink';
+eStyle.style.borderWidth = '4px';
+eStyle.style.borderStyle = 'solid';
+eStyle.style.borderColor = 'black';
