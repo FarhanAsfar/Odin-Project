@@ -22,3 +22,4 @@ linkPara.appendChild(text);
 
 // section.removeChild(linkPara); 
 linkPara.remove(); //delete the node
+// linkPara.parentNode.removeChild(linkPara); //for older browsers
