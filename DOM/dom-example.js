@@ -10,7 +10,7 @@ content.href = "https://javascript.info";
 section.appendChild(content);
 
 const para = document.createElement('p'); //create new paragraph
-para.textContent = "MDN web docs";
+para.textContent = "MDN Web Docs";
 section.appendChild(para);
 
 
@@ -18,8 +18,15 @@ const text = document.createTextNode("web dev knowledge");
 const linkPara = document.querySelector('p');
 linkPara.appendChild(text);
 
-// section.appendChild(linkPara); //move para to the bottom.
+
+section.appendChild(linkPara); //move para to the bottom.
 
 // section.removeChild(linkPara); 
-linkPara.remove(); //delete the node
+//linkPara.remove(); //delete the node
 // linkPara.parentNode.removeChild(linkPara); //for older browsers
+
+
+//inline styling
+para.style.color = 'white';
+para.style.backgroundColor = 'black';
+para.style.textAlign = "center";
