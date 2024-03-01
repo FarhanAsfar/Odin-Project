@@ -27,6 +27,10 @@ section.appendChild(linkPara); //move para to the bottom.
 
 
 //inline styling
-para.style.color = 'white';
-para.style.backgroundColor = 'black';
-para.style.textAlign = "center";
+// para.style.color = 'white';
+// para.style.backgroundColor = 'black';
+// para.style.textAlign = "center";
+
+
+//dynamically manipulate style
+para.setAttribute('class', 'highlight');
