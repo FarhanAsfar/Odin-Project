@@ -17,3 +17,8 @@ section.appendChild(para);
 const text = document.createTextNode("web dev knowledge");
 const linkPara = document.querySelector('p');
 linkPara.appendChild(text);
+
+// section.appendChild(linkPara); //move para to the bottom.
+
+// section.removeChild(linkPara); 
+linkPara.remove(); //delete the node
