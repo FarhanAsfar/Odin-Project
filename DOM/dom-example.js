@@ -1,6 +1,6 @@
 const link = document.querySelector('a');
 
-link.textContent = "Mozilla Developer Network";
+link.textContent = "Developer Network";
 link.href = "https://developer.mozilla.org"; //change the url link
 
 const section = document.querySelector('section');
