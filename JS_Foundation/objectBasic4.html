@@ -26,26 +26,21 @@
 
   </body>
   <script>
-    const cat = {
-      name : 'Bertie',
-      breed : 'Cymric',
-      color : 'white',
-      greeting: function() {
-        console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
-      }
-    }
+    function catDetails(name,breed,color) {
+        const cat = {};
 
-    const cat2 = {
-      name : 'Elfie',
-      breed : 'Aphrodite Giant',
-      color : 'ginger',
-      greeting: function() {
-        console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
-      }
-    }
+        cat.name = name;
+        cat.breed = breed;
+        cat.color = color;
 
-    cat.greeting();
-    cat2.greeting();
+        greeting: function() {
+            console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
+        }
+    }
+    const bertie = new catDetails("Bertie", "Cymric", "White");
+    bertie.greetin();
+
+    
   </script>
 
 </html>
