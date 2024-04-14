@@ -26,19 +26,23 @@
 
   </body>
   <script>
-    function catDetails(name,breed,color) {
+    function CatDetails(name,breed,color) {
         const cat = {};
-
         cat.name = name;
         cat.breed = breed;
         cat.color = color;
 
-        greeting: function() {
+        cat.greeting = function() {
             console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
         }
+
+        return cat;
     }
-    const bertie = new catDetails("Bertie", "Cymric", "White");
-    bertie.greetin();
+    const bertie = new CatDetails("Bertie", "Cymric", "White");
+    bertie.greeting();
+
+    const arty = new  CatDetails("Arty", "Rhino", "Black");
+    arty.greeting();
 
     
   </script>
