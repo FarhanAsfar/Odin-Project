@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8"/>
-    <title>Object basics: Task 3</title>
+    <title>Object basics: Task 4</title>
     <style>
       p {
         color: purple;
@@ -31,16 +31,16 @@
       breed : 'Cymric',
       color : 'white',
       greeting: function() {
-        console.log('Hello! said '+cat.name + " the "+cat.breed);
+        console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
       }
     }
 
     const cat2 = {
-      name : 'Antie',
-      breed : 'Rysric',
-      color : 'black',
+      name : 'Elfie',
+      breed : 'Aphrodite Giant',
+      color : 'ginger',
       greeting: function() {
-        console.log('Hello! said '+${this.name} + " the "+${this.breed});
+        console.log(`Hello, said ${ this.name } the ${ this.breed }.`);
       }
     }
 
