@@ -1,7 +1,7 @@
-function createStudent(name){
+function createStudent(name) {
     const student = {};
     student.name = name;
-    student.introduceSelf = function() {
+    student.introduceSelf = function () {
         console.log(`Hi! I'm ${this.name}.`);
     };
     return student;
@@ -18,3 +18,12 @@ bob.introduceSelf();
 
 const alice = new createStudent("Alice");
 alice.introduceSelf();
+
+const cat = {};
+cat.name = "mewo";
+cat.breed = "cymric";
+cat.color = "white";
+console.log(cat);
+
+console.table(cat);
+
