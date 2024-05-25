@@ -1,4 +1,4 @@
-const math = require('./math');
+const math = require("./math");
 
-console.log(add(2,5));
+console.log(math(2,5));
 
