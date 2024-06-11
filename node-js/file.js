@@ -5,4 +5,9 @@ const fs = require('fs');
 
 
 //Asynchronous call
-fs.writeFile('./test.txt', 'hello async', (err)=>{});
+fs.writeFile('./test.txt', 'hello async', (err)=>{}) ; //create and write a file.
+
+
+
+const result = fs.readFileSync('./contact.txt', 'utf-8');//read file
+console.log(result);
