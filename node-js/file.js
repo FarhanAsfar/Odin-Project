@@ -28,4 +28,6 @@ fs.appendFileSync("./test.txt", `hello\n`);
 
 //fs.cpSync('./test.txt', './copy.txt'); //create a copy of a file
 
-fs.unlinkSync('./copy.txt');
+//fs.unlinkSync('./copy.txt');
+
+console.log(fs.statSync('./test.txt')); //check status of a file
