@@ -14,5 +14,5 @@ module.exports = {
 };
 
 //different way to export
-exports.add = (a,b) => a+b;
-exports.subtract = (a,b) => a-b;
+// exports.add = (a,b) => a+b;
+// exports.subtract = (a,b) => a-b;
