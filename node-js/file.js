@@ -5,7 +5,7 @@ const fs = require('fs');
 
 
 //Asynchronous call
-fs.writeFile('./test.txt', 'hello async', (err)=>{}) ; //create and write a file.
+//fs.writeFile('./test.txt', 'hello async', (err)=>{}) ; //create and write a file.
 
 
 
@@ -13,10 +13,15 @@ fs.writeFile('./test.txt', 'hello async', (err)=>{}) ; //create and write a file
 // console.log(result);
 
 
-fs.readFile('./contact.txt','utf-8', (err,result)=>{
-    if(err){
-        console.log("Error",err);
-    }else{
-        console.log(result);
-    }
-})
+
+//read file
+// fs.readFile('./contact.txt','utf-8', (err,result)=>{
+//     if(err){
+//         console.log("Error",err);
+//     }else{
+//         console.log(result);
+//     }
+// })
+
+
+fs.appendFileSync("./test.txt", `hello\n`); 
