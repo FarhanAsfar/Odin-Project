@@ -26,5 +26,6 @@ const fs = require('fs');
 
 fs.appendFileSync("./test.txt", `hello\n`); 
 
-fs.cpSync('./test.txt', './copy.txt'); //create a copy of a file
+//fs.cpSync('./test.txt', './copy.txt'); //create a copy of a file
 
+fs.unlinkSync('./copy.txt');
