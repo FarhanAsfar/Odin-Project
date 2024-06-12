@@ -1,8 +1,15 @@
 const http = require("http");
+const fs = require("fs");
+
+
 
 const myServer = http.createServer((req, res) => {
-    console.log("new reqeuest received");
-    res.end("hello from server");
+    //console.log(req.headers);
+    const log = `${Date.now()}:New req. received\n`;
+    fs.appendFile("log.txt",log, (err,data)=>{
+        res.end("hello from server");    
+    })
+    
 });
 
 myServer.listen(8000, ()=>console.log('server started'));
