@@ -8,17 +8,18 @@ const myServer = http.createServer((req, res) => {
     //console.log(req.headers);
     const log = `${Date.now()}: ${req.url} New Req. received\n`;
     const myUrl = url.parse(req.url);
+    console.log(myUrl);
 
-    if(req.url === "/favicon.ico")
+    if(req.url === '/favicon.ico')
         return res.end();
     fs.appendFile("log.txt",log, (err,data)=>{
         //res.end("hello from server");    
-        switch (req.url){
+        switch (myUrl.pathname){
             case "/":
                 res.end("Homepage");
                 break;
             case "/about":
-                res.end("About Page");
+                res.end("I am Arnob");
                 break;
             default:
                 res.end("404 Not Found!");
