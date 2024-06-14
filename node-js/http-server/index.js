@@ -7,6 +7,8 @@ const url = require("url");
 const myServer = http.createServer((req, res) => {
     //console.log(req.headers);
     const log = `${Date.now()}: ${req.url} New Req. received\n`;
+    const myUrl = url.parse(req.url);
+
     if(req.url === "/favicon.ico")
         return res.end();
     fs.appendFile("log.txt",log, (err,data)=>{
