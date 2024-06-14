@@ -18,13 +18,16 @@ const myServer = http.createServer((req, res) => {
             case "/":
                 res.end("Homepage");
                 break;
+
             case "/search":
                 const search = myUrl.query.search_query;
                 res.end("Here are your results for "+search);
+
             case "/about":
                 const qp = 
                 res.end("I am Arnob");
                 break;
+                
             default:
                 res.end("404 Not Found!");
         }
