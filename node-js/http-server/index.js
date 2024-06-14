@@ -7,7 +7,7 @@ const url = require("url");
 const myServer = http.createServer((req, res) => {
     //console.log(req.headers);
     const log = `${Date.now()}: ${req.url} New Req. received\n`;
-    const myUrl = url.parse(req.url);
+    const myUrl = url.parse(req.url, true);
     console.log(myUrl);
 
     if(req.url === '/favicon.ico')
@@ -18,7 +18,11 @@ const myServer = http.createServer((req, res) => {
             case "/":
                 res.end("Homepage");
                 break;
+            case "/search":
+                const search = myUrl.query.search_query;
+                res.end("Here are your results for "+search);
             case "/about":
+                const qp = 
                 res.end("I am Arnob");
                 break;
             default:
