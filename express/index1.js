@@ -9,7 +9,7 @@ const users = [{
     }],
 }];
 
-app.use{express.json()};
+app.use(express.json());
 
 app.get("/", function(req, res){
     const aliceKidney = users[0].kidney;
@@ -18,13 +18,13 @@ app.get("/", function(req, res){
 
     for(let i=0; i<aliceKidney.length; i++){
         if(aliceKidney[i].healthy){
-            kidneyNo = healthyKidney+1;
+            healthyKidney = healthyKidney+1;
         }
     }
     const unhealthyKidney = kidneyNo - healthyKidney;
 
     res.json({
-        aliceKidney,
+        kidneyNo,
         healthyKidney,
         unhealthyKidney
     })
@@ -34,8 +34,9 @@ app.get("/", function(req, res){
 
 app.post("/", function(req,res){
     const isHealthy =req.body.isHealthy;
+
     users[0].kidney.push({
-        healthy: isHealthy;
+        healthy: isHealthy
     })
     res.json({
         msg: "Done!"
