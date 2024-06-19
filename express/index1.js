@@ -9,6 +9,7 @@ const users = [{
     }],
 }];
 
+
 app.get("/", function(req, res){
     const aliceKidney = users[0].kidney;
     const kidneyNo = aliceKidney.length; 
@@ -29,5 +30,15 @@ app.get("/", function(req, res){
 
     console.log(aliceKidney);
 });
+
+app.post("/", function(req,res){
+    const isHealthy =req.body.isHealthy;
+    users[0].kidney.push({
+        healthy: isHealthy;
+    })
+    res.json({
+        msg: "Done!"
+    })
+})
 
 app.listen(3000);
