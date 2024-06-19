@@ -9,6 +9,7 @@ const users = [{
     }],
 }];
 
+app.use{express.json()};
 
 app.get("/", function(req, res){
     const aliceKidney = users[0].kidney;
