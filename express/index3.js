@@ -1,6 +1,8 @@
 const expresss = require("express");
 
 const app = expresss();
+const port = 3000;
+
 
 app.get("/", function(req, res){
     return res.send("Home Page");
@@ -11,6 +13,6 @@ app.get("/about", function(req, res){
 });
 
 
-app.listen(3000, function(){
-    console.log("server started..!")
+app.listen(port, function(){
+    console.log(`Port: ${port} has started`);
 });
