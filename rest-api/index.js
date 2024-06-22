@@ -21,22 +21,28 @@ app.get('/api/users', function(req,res){
 });
 
 app.route('/api/users/:id')
-.get(function(req,res){
-    const id = Number(req.params.id);
-    const user = users.find(user => user.id === id);
-    return res.json(user);
-})
+    .get(function(req,res){
+        const id = Number(req.params.id);
+        const user = users.find(user => user.id === id);
+        return res.json(user);
+    })
 
-.post(function(req,res){
-    //create new user
-    res.json({
-        status: 'pending'
-    });
-})
+    .post(function(req,res){
+        //create new user
+        res.json({
+            status: 'pending'
+        });
+    })
 
-.patch(function(req,res){
-    //Edit user
-})
+    .patch(function(req,res){
+        //Edit user with id
+        return res.json({status: "pending.."});
+    })
+
+    .delete(function(req,res){
+        //Edit user with id
+        return res.json({status: "pending.."});
+    })
 
 
 
