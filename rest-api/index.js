@@ -20,11 +20,26 @@ app.get('/api/users', function(req,res){
     return res.json(users);
 });
 
-app.get('/api/users/:id', function(req,res){
+app.route('/api/users/:id')
+.get(function(req,res){
     const id = Number(req.params.id);
     const user = users.find(user => user.id === id);
     return res.json(user);
 })
+
+.post(function(req,res){
+    //create new user
+    res.json({
+        status: 'pending'
+    });
+})
+
+.patch(function(req,res){
+    //Edit user
+})
+
+
+
 
 
 
