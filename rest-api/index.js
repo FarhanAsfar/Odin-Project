@@ -4,6 +4,9 @@ const users = require("./MOCK_DATA.json");
 const app = express();
 const port = 3000;
 
+//Middleware
+app.use(express.urlencoded({extended: false}));
+
 //Routes
 //Render html document
 app.get('/users', function(req,res){
@@ -39,7 +42,7 @@ app.route('/api/users/:id')
 
     app.post('/api/users', function(req,res){
         //create new user
-        const body = req.body; //get data that has been sent
+        const body = req.body; //get data that has been sent from frontend
         console.log(body);
         res.json({
             status: 'pending'
