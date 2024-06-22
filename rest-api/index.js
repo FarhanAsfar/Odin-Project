@@ -48,7 +48,8 @@ app.route('/api/users/:id')
         users.push({...body, id: users.length+1});
         fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err,data)=>{
             return res.json({
-                status: 'pending'
+                status: 'successful', 
+                id: users.length
             });
         });
         
