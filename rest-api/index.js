@@ -27,26 +27,24 @@ app.route('/api/users/:id')
         return res.json(user);
     })
 
-    .post(function(req,res){
-        //create new user
-        res.json({
-            status: 'pending'
-        });
-    })
-
     .patch(function(req,res){
         //Edit user with id
         return res.json({status: "pending.."});
     })
 
     .delete(function(req,res){
-        //Edit user with id
+        //Delete user with id
         return res.json({status: "pending.."});
+    });
+
+    app.post('/api/users', function(req,res){
+        //create new user
+        const body = req.body; //get data that has been sent
+        console.log(body);
+        res.json({
+            status: 'pending'
+        });
     })
-
-
-
-
 
 
 
