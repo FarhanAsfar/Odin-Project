@@ -45,7 +45,7 @@ app.route('/api/users/:id')
         //create new user
         const body = req.body; //get data that has been sent from frontend
         //console.log(body);
-        users.push(body);
+        users.push({...body, id: users.length+1});
         fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err,data)=>{
             return res.json({
                 status: 'pending'
