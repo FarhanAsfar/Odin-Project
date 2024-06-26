@@ -13,6 +13,7 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
     font-weight: normal;
+    border-radius: 15px;
 }
 
 body{
