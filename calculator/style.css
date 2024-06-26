@@ -45,10 +45,11 @@ body{
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+    font-size: 2.5rem;
 }
 
 .output .previous-operand{
     color: rgba(255,255,255,.75);
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
