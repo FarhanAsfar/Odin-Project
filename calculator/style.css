@@ -1,3 +1,14 @@
+:root {
+    --text-color: black; /* Default text color */
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white; /* Text color for dark mode */
+    }
+}
+
 *, *::before, *::after{
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
@@ -7,7 +18,8 @@
 body{
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, #00AAFF, #00FF6C );
+    /* background: linear-gradient(to right, #00AAFF, #00FF6C ); */
+    background: grey;
 }
 
 .calculator-grid{
@@ -35,6 +47,7 @@ body{
 
 .span-two{
     grid-column: span 2;
+    color: orange;
 }
 
 .output{
@@ -53,6 +66,10 @@ body{
 .output .previous-operand{
     color: rgba(255,255,255,.75);
     font-size: 1.5rem;
+}
+
+.operation{
+    color: orange;
 }
 
 
