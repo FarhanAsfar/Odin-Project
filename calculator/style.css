@@ -26,6 +26,7 @@ body{
     border: 1px solid white;
     outline: none;
     background-color: rgba(255,255,255,.75);
+    transition: back-ground-color 0.3s ease;
 }
 
 .calculator-grid > button:hover {
@@ -52,5 +53,46 @@ body{
 .output .previous-operand{
     color: rgba(255,255,255,.75);
     font-size: 1.5rem;
+}
+
+
+
+@media (max-width: 600px) {
+    .calculator-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: minmax(100px, auto) repeat(5, 1fr);
+    }
+
+    .calculator-grid > button {
+        font-size: 1.5rem;
+    }
+
+    .output {
+        font-size: 2rem;
+    }
+
+    .output .previous-operand {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .calculator-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: minmax(80px, auto) repeat(5, 1fr);
+    }
+
+    .calculator-grid > button {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .output {
+        font-size: 1.5rem;
+    }
+
+    .output .previous-operand {
+        font-size: 1rem;
+    }
 }
 
