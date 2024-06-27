@@ -46,6 +46,8 @@ app.route('/api/users/:id')
     .delete(function(req,res){
         //Delete user with id
         const id = Number(req.params.id); //getting the user id
+        const userIndex = users.findIndex(user => user.id === id);//finding index of that user id
+        
     });
 
     app.post('/api/users', function(req,res){
