@@ -51,8 +51,10 @@ app.route('/api/users/:id')
             return.status(404).json({
                 status: 'Erro',
                 message: 'User not found!'
-            })
+            });
         }
+        users.splice(userIndex, 1); //removing user
+        
     });
 
     app.post('/api/users', function(req,res){
