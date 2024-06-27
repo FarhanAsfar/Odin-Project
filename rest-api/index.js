@@ -47,7 +47,12 @@ app.route('/api/users/:id')
         //Delete user with id
         const id = Number(req.params.id); //getting the user id
         const userIndex = users.findIndex(user => user.id === id);//finding index of that user id
-        
+        if(userIndex == -1){ //if user not present
+            return.status(404).json({
+                status: 'Erro',
+                message: 'User not found!'
+            })
+        }
     });
 
     app.post('/api/users', function(req,res){
