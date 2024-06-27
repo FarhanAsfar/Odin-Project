@@ -48,13 +48,27 @@ app.route('/api/users/:id')
         const id = Number(req.params.id); //getting the user id
         const userIndex = users.findIndex(user => user.id === id);//finding index of that user id
         if(userIndex == -1){ //if user not present
-            return.status(404).json({
-                status: 'Erro',
+            return res.status(404).json({
+                status: 'Error',
                 message: 'User not found!'
             });
         }
         users.splice(userIndex, 1); //removing user
-        
+
+        //update the text file(user list)
+        const updateUsersJson = JSON.stringify(users, null, 2); //JSON: global object
+        fs.writeFile('./MOCK_DATA.json', updateUsersJson, (writeErr)=>{
+            if(writeErr){
+                return res.status(500).json({
+                    status: 'Error',
+                    message: `Couldn't update users list`
+                });
+            }
+            return res.json({
+                status: 'Succesful',
+                message: 'User deleted'
+            });
+        });
     });
 
     app.post('/api/users', function(req,res){
