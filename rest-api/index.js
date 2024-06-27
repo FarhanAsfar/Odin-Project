@@ -38,6 +38,7 @@ app.route('/api/users/:id')
 
     .delete(function(req,res){
         //Delete user with id
+        const id = Number(req.params.id);
         return res.json({status: "pending.."});
     });
 
