@@ -27,7 +27,14 @@ app.get('/api/users', function(req,res){
 app.route('/api/users/:id')
     .get(function(req,res){
         const id = Number(req.params.id);
-        const user = users.find(user => user.id === id);
+        const user = users.find(user => user.id === id); //getting user index
+        const userIndex = users.findIndex(user => user.id === id);//checking if user exits
+        if(userIndex == -1){
+            return res.status(404).json({
+                status: 'error',
+                message: 'User not found'
+            })
+        }
         return res.json(user);
     })
 
@@ -39,7 +46,22 @@ app.route('/api/users/:id')
     .delete(function(req,res){
         //Delete user with id
         const id = Number(req.params.id);
-        return res.json({status: "pending.."});
+        const userIndex = users.findIndex(user => user.id === id);
+        if(userIndex == -1){
+            return res.status(404).json({
+                status: 'error',
+                message: 'User not found'
+            })
+        }
+        users.splice(userIndex, 1);
+
+        fs.writeFile('./MOCK_DATA.json', JSON.stringify(users, null, 2), (writeErr) => {
+            if (writeErr) {
+                return res.status(500).json({ status: 'error', message: 'Internal Server Error' });
+            }
+    
+            return res.json({ status: 'successful', message: 'User deleted' });
+        });
     });
 
     app.post('/api/users', function(req,res){
