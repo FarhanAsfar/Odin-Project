@@ -20,7 +20,7 @@ body{
     padding: 0;
     margin: 0;
     background: linear-gradient(45deg, #0a0a0a, #3a4452 );
-    //background: skyblue;
+    /* background: skyblue; */
 }
 
 .calculator-grid{
@@ -40,6 +40,7 @@ body{
     outline: none;
     background-color: rgba(255,255,255,.75);
     transition: back-ground-color 0.3s ease;
+    /* border-radius: 50%; */
 }
 
 .calculator-grid > button:hover {
@@ -48,12 +49,13 @@ body{
 
 .span-two{
     grid-column: span 2;
-    color: orange;
+    color: #fb7c14; 
 }
 
 .output{
     grid-column: 1 / -1;
     background-color: rgba(0,0,0,.75);
+    background: linear-gradient(45deg, #0a0a0a, #3a4452 );
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -70,7 +72,7 @@ body{
 }
 
 .operation{
-    color: orange;
+    color: #fb7c14;
 }
 
 
