@@ -51,6 +51,9 @@ app.route('/api/users/:id')
                 message: 'User not found!'
             });
         }
+        
+        users[userIndex] = {...users[userIndex], ...body}; //updating the user with new user data
+        
 
     })
 
