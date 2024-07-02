@@ -56,7 +56,19 @@ app.route('/api/users/:id')
 
         const updateUsersJson = JSON.stringify(users, null, 2); //convert updated users array to JSON string
 
-        
+        fs.writeFile('./MOCK_DATA.json', updateUsersJson, (writeErr)=>{
+            if(writeErr){
+                return res.status(500).json({
+                    status: 'Error',
+                    message: 'Internal Server Error'
+                });
+            }
+            return res.json({
+                status: 'Succesful',
+                message: 'User updated',
+                user: users[userIndex]
+            });
+        });
 
     })
 
