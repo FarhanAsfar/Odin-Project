@@ -53,6 +53,9 @@ app.route('/api/users/:id')
         }
         
         users[userIndex] = {...users[userIndex], ...body}; //updating the user with new user data
+
+        const updateUsersJson = JSON.stringify(users, null, 2); //convert updated users array to JSON string
+
         
 
     })
