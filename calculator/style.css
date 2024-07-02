@@ -36,11 +36,16 @@ body{
 .calculator-grid > button{
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid white;
+    border: 1px solid grey;
     outline: none;
     background-color: rgba(255,255,255,.75);
+    background: linear-gradient(45deg, #0a0a0a, #3a4452 );
     transition: back-ground-color 0.3s ease;
     /* border-radius: 50%; */
+}
+
+button[data-number]{
+    color: white;
 }
 
 .calculator-grid > button:hover {
@@ -53,6 +58,7 @@ body{
 }
 
 .output{
+    border: 1px solid grey;
     grid-column: 1 / -1;
     background-color: rgba(0,0,0,.75);
     background: linear-gradient(45deg, #0a0a0a, #3a4452 );
