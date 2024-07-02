@@ -39,36 +39,19 @@ app.route('/api/users/:id')
     })
 
     .patch(function(req,res){
-        //Edit user with id
-        const id = Number(req.params.id);//fetch user id from request
-        const userIndex = users.findIndex(user => user.id === id); //find user index
+        //Edit user's information
+        const id = Number(req.params.id); //fetch user id from request
+        const userIndex = users.findIndex(user => user.id === id); //get user index 
 
-        const body = req.body; //fetch new user data
-        // console.table(body);
-
-        if(userIndex == -1){
+        const body = req.body; //get new user data from request
+        
+        if(userIndex == -1){ //check if user exist
             return res.status(404).json({
                 status: 'Error',
                 message: 'User not found!'
             });
         }
 
-        users[userIndex] = {...users[userIndex], ...body};
-        const updateUsersJson = JSON.stringify(users, null, 2);
-
-        fs.writeFile('./MOCK_DATA.json', updateUsersJson, (writeErr)=>{
-            if(writeErr){
-                return res.status(500).json({
-                    status: 'Error',
-                    message: 'Internal Server Error'
-                });
-            }
-            return res.json({
-                status: 'Successful',
-                message: 'User Updated',
-                user: users[userIndex]
-            });
-        });
     })
 
     .delete(function(req,res){
