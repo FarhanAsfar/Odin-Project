@@ -13,7 +13,7 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
     font-weight: normal;
-    border-radius: 15px;
+    /* border-radius: 15px; */
 }
 
 body{
@@ -30,7 +30,7 @@ body{
     min-height: 100vh;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto)repeat(5, 100px);
-    gap: 1px;
+    /* gap: 1px; */
 }
 
 .calculator-grid > button{
