@@ -86,6 +86,7 @@ app.route('/api/users/:id')
 
         //update the text file(user list)
         const updateUsersJson = JSON.stringify(users, null, 2); //JSON: global object
+
         fs.writeFile('./MOCK_DATA.json', updateUsersJson, (writeErr)=>{
             if(writeErr){
                 return res.status(500).json({
@@ -113,8 +114,5 @@ app.route('/api/users/:id')
         });
         
     });
-
-
-
 
 app. listen(port, ()=> console.log(`PORT:${port} has started...`));
