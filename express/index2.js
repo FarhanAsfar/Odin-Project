@@ -7,6 +7,12 @@ app.get("/file/:fileName", function(req,res){
     console.log(fileName);
 
     fs.readFile(fileName, "utf-8", function(err, data){
+        if(err){
+            return res.status(500).json({
+                status: 'unsuccessful',
+                message: 'Could not read file'
+            })
+        }
         res.json({
             data
         })
