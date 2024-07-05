@@ -8,6 +8,16 @@ const port = 3000;
 //Middleware
 app.use(express.urlencoded({extended: false}));
 
+app.use((req, res, next) => {
+    console.log("Hello from Middleware 1");
+    next();
+});
+
+app.use((req, res, next) => {
+    console.log("Hello from Middleware 2");
+    return res.end('bye');
+});
+
 //Routes
 //Render html document
 app.get('/users', function(req,res){

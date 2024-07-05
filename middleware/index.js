@@ -8,7 +8,7 @@ const port = 3000;
 //Middleware
 app.use(express.urlencoded({extended: false}));
 
-app.use((req,r res, next) => {
+app.use((req, res, next) => {
     console.log("Hello: Middleware 1");
 })
 
