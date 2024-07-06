@@ -99,3 +99,5 @@
 1720295553741: DELETE: /api/users/1005
 
 1720295560725: POST: /api/users/
+
+1720296289447: POST: /api/users/

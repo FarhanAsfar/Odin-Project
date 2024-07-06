@@ -125,7 +125,7 @@ app.route('/api/users/:id')
         users.push({...body, id: newUserId});
 
         fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err,data)=>{
-            return res.json({
+            return res.status(201).json({
                 status: 'successful', 
                 id: newUserId,
                 user: body
