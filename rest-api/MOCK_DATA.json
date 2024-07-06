@@ -8008,20 +8008,19 @@
     "id": 1001
   },
   {
-    "first_name": "arnob",
-    "last_name": "asfar",
-    "email": "fa@gmail.com",
-    "gender": "male",
-    "job_title": "Web3 DEV",
-    "id": 1003
+    "first_name": "Covey",
+    "last_name": "R",
+    "email": "JCA@gmail.com",
+    "gender": "Male",
+    "job_title": "Writer",
+    "id": 1004
   },
   {
-    "first_name": "Mrs",
-    "last_name": "Jessica",
-    "email": "jessica@gmail.com",
-    "gender": "female",
-    "job_title": "Managing Partner",
-    "id": 1004,
-    "salary": "120k"
+    "first_name": "Flintoff",
+    "last_name": "R",
+    "email": "FA@gmail.com",
+    "gender": "Male",
+    "job_title": "Writer",
+    "id": 1005
   }
 ]

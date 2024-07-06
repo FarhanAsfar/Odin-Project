@@ -86,9 +86,11 @@ app.route('/api/users/:id')
         if(userIndex == -1){ //if user not present
             return res.status(404).json({
                 status: 'Error',
-                message: 'User not found!'
+                message: 'User does not exist!'
             });
         }
+        const deletedUser = users[userIndex]; //keeping info of the deleted user
+
         users.splice(userIndex, 1); //removing user
 
         //update the text file(user list)
@@ -99,12 +101,13 @@ app.route('/api/users/:id')
                 return res.status(500).json({
                     status: 'Error',
                     message: `Couldn't update users list`
-                });
+                })
             }
             return res.json({
                 status: 'Succesful',
-                message: 'User deleted'
-            });
+                message: 'User deleted',
+                user: deletedUser
+            })
         });
     });
 
@@ -112,11 +115,20 @@ app.route('/api/users/:id')
         //create new user
         const body = req.body; //get data that has been sent from frontend
         //console.log(body);
-        users.push({...body, id: users.length+1});
+
+        if(!body.first_name || !body.last_name || !body.email || !body.gender || !body.job_title){
+            return res.status(400).json({
+                Error: "Fill up all the fields"
+            })
+        }
+        const newUserId = users[users.length-1].id+1;
+        users.push({...body, id: newUserId});
+
         fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err,data)=>{
             return res.json({
                 status: 'successful', 
-                id: users.length
+                id: newUserId,
+                user: body
             });
         });
         
