@@ -134,4 +134,13 @@ app.route('/api/users/:id')
         
     });
 
+
+//global catches -> error handling middleware
+app.use((err, req, res, next) => { // will be called if there is any exception above
+    res.json({
+        message: "Server is not responding"
+    })
+});
+
+
 app. listen(port, ()=> console.log(`PORT:${port} has started...`));
