@@ -4,6 +4,8 @@ const jwtPassword = "12345";
 
 const app = express();
 
+app.use(express.json());
+
 const users = [
     {
         username: 'abc@gmail.com',
@@ -23,12 +25,13 @@ const users = [
 ];
 
 function userExists(username, password){
-    const userExists = false;
+    let userExists = false;
     users.forEach(user => {
         if(user.username == username && user.password == password){
             userExists = true;
         }
-    })
+    });
+    return userExists;
 }
 
 app.post("/signin", (req, res) => {
