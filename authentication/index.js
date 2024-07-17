@@ -23,7 +23,12 @@ const users = [
 ];
 
 function userExists(username, password){
-
+    const userExists = false;
+    users.forEach(user => {
+        if(user.username == username && user.password == password){
+            userExists = true;
+        }
+    })
 }
 
 app.post("/signin", (req, res) => {
@@ -36,7 +41,7 @@ app.post("/signin", (req, res) => {
         });
     }
 
-    var token = jwt.sign({username: username }, "shhhhh");
+    var token = jwt.sign({username: username }, jwtPassword);
 
     return res.json({
         token
@@ -56,4 +61,6 @@ app.get("/users", (req, res) => {
     }
 });
 
-app.listen(3001);
+app.listen(3001, ()=>{
+    console.log("Server is running...")
+});
