@@ -16,4 +16,6 @@ function onDone(data){
     console.log(data);
 }
 
-ReadFile().then(onDone);
+let a = ReadFile();
+console.log(a);
+a.then(onDone);
