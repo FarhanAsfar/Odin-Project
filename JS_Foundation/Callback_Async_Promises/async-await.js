@@ -1,6 +1,6 @@
 //----------------Callback Syntax--------------------------//
 function myAsycnFunction(callback) {
-    cancelIdleCallback("hello");
+    callback("hello");
   }
   
   function main() {
