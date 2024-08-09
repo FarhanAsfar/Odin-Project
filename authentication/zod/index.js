@@ -5,7 +5,7 @@ const app = express();
 // const schema = zod.array(zod.number());
 
 const schema = zod.object({
-    email: zod.string(),
+    email: zod.string().email(),
     password: zod.string(),
     country: zod.literal("BAN").or(zod.literal("CAN")),
     kidney: zod.array(zod.number())
