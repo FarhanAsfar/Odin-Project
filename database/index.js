@@ -8,6 +8,11 @@ mongoose.connect(
   "mongodb+srv://farhan:farhan21@cluster0.0qnn6.mongodb.net/user_app",
 );
 
+//connect with local db
+// mongoose.connect(
+//   "mongodb://127.0.0.1:27017/newDB"
+// )
+
 const User = mongoose.model("Users", {
   name: String,
   email: String,
