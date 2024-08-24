@@ -28,7 +28,7 @@ router.post('/signup', async(req,res,next)=>{
 router.post('/signin', async (req, res, next)=>{
     const {username, password} = req.body;
 
-    const user = await Admin.findOne({
+    const user = await Admin.findOne({ 
         username,
         password
     })
