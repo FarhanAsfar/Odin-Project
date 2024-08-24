@@ -4,14 +4,15 @@ const adminMiddleware = require("../middleware/admin");
 const router = Router();
 
 const jwt = require("jsonwebtoken");
-const jwt_secret = require("../config");
+const { jwt_secret } = require("../config");
 
 
 const {Admin, User, Course} = require("../db");
 
 //Admin Routes
-router.post('/signup', async (req,res,next)=>{
+router.post('/signup', async(req,res,next)=>{
     //signup logic
+    //check if admin exists
     const {username, password} = req.body;
 
     await Admin.create({
@@ -27,13 +28,13 @@ router.post('/signup', async (req,res,next)=>{
 router.post('/signin', async (req, res, next)=>{
     const {username, password} = req.body;
 
-    const user = await Admin.find({
+    const user = await Admin.findOne({
         username,
         password
     })
 
     if(user){
-        const token = jwt.sign({ username}, jwt_secret);
+        const token = jwt.sign({username}, jwt_secret);
         res.json({
             token
         })
@@ -62,6 +63,8 @@ router.post('/courses', adminMiddleware, async (req, res) => {
     res.json({
         message: 'Course created successfully', courseId: newCourse._id
     })
+    const username = req.username;
+    console.log(username);
 });
 
 
