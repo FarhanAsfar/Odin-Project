@@ -12,6 +12,7 @@ function userMiddleware(req, res, next) {
     const decodedToken = jwt.verify(jwtToken, jwt_secret);
 
     if(decodedToken.username){
+        req.username = decodedToken.username;
         next();
     }else{
         res.status(403).json({
