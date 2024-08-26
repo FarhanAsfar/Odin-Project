@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<script>
+  </head>
+  <script>
     function populateDiv(){
         const element = document.getElementById("finalSum");
         const a = document.getElementById("firstNumber").value;
@@ -13,13 +13,16 @@
 
         element.innerHTML = parseInt(a)+parseInt(b);
     }
-</script>
+  </script>
 
-<body>
-    <input id="firstNumber" type="text" placeholder="first number"> <br><br>
-    <input id="secondNumber" type="text" placeholder="second number"> <br><br>
-    <button onclick="populateDiv()">Sum</button> <br> <br>
+  <body>
+    <input id="firstNumber" type="text" placeholder="first number" />
+    <br /><br />
+    <input id="secondNumber" type="text" placeholder="second number" />
+    <br /><br />
+    <button onclick="populateDiv()">Sum</button> <br />
+    <br />
 
     <div id="finalSum"></div>
-</body>
+  </body>
 </html>
