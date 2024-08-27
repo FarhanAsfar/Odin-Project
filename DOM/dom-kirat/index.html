@@ -6,25 +6,38 @@
     <title>Document</title>
   </head>
   <script>
-    function populateDiv(){
-        const element = document.getElementById("finalSum");
-        const a = document.getElementById("firstNumber").value;
-        const b = document.getElementById("secondNumber").value;
+    // Debounce
+    let timeout;
+    function debouncePopulateDiv(){
+      //delay the call to populateDiv until i've not been called for 100ms
+      //and i've been called atleast once
+      clearTimeout(timeout);
+      timeout = setTimeout(function(){
+        populateDiv();
+      },2000);
+    }
 
-        //element.innerHTML = parseInt(a)+parseInt(b);
-        
-        //fetch
-        fetch("https://sum-server.100xdevs.com/sum?a=" + a + "&b=" +b)
+    function populateDiv() {
+      const element = document.getElementById("finalSum");
+      const a = document.getElementById("firstNumber").value;
+      const b = document.getElementById("secondNumber").value;
+
+      element.innerHTML = parseInt(a)+parseInt(b);
+
+      //fetch(hit a backend server to calculate sum)
+      // fetch("https://sum-server.100xdevs.com/sum?a=" + a + "&b=" + b);
     }
   </script>
 
   <body>
-    <input id="firstNumber" type="text" placeholder="first number" />
+    <!-- send request to calculate sum on changing the value in the input box -->
+
+    <input oninput="debouncePopulateDiv()" id="firstNumber" type="text" placeholder="first number" />
     <br /><br />
-    <input id="secondNumber" type="text" placeholder="second number" />
+    <input oninput="debouncePopulateDiv()" id="secondNumber" type="text" placeholder="second number" />
     <br /><br />
-    <button onclick="populateDiv()">Sum</button> <br />
-    <br />
+    <!-- <button onclick="populateDiv()">Sum</button> <br /><br /> -->
+
 
     <div id="finalSum"></div>
   </body>
