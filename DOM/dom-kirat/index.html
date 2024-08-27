@@ -11,7 +11,10 @@
         const a = document.getElementById("firstNumber").value;
         const b = document.getElementById("secondNumber").value;
 
-        element.innerHTML = parseInt(a)+parseInt(b);
+        //element.innerHTML = parseInt(a)+parseInt(b);
+        
+        //fetch
+        fetch("https://sum-server.100xdevs.com/sum?a=" + a + "&b=" +b)
     }
   </script>
 
