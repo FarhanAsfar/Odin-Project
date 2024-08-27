@@ -9,8 +9,7 @@
     // Debounce
     let timeout;
     function debouncePopulateDiv(){
-      //delay the call to populateDiv until i've not been called for 100ms
-      //and i've been called atleast once
+      //if debouncePopulatedDiv is called within the time limit, then clear the time and set a new timer.
       clearTimeout(timeout);
       timeout = setTimeout(function(){
         populateDiv();
