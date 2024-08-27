@@ -4,12 +4,12 @@ const app = express();
 const Port = 3000;
 
 
-app.post('/sum', (req, res)=>{
-    const a = req.params.a;
-    const b = req.params.b;
-    const sum = parseInt(a) + parseInt(b);
+app.get('/sum', (req, res)=>{
+    const a = req.query.a;
+    const b = req.query.b;
+    const sum =parseInt(a) + parseInt(b);
 
-    res.send(sum);
+    res.send(`Sum: ${sum}`);
 });
 
 
