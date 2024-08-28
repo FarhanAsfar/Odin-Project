@@ -20,7 +20,7 @@
 
         btn.addEventListener('click', async()=>{
             const a = document.getElementById("firstNumber").value;
-        const b = document.getElementById("secondNumber").value;
+            const b = document.getElementById("secondNumber").value;
             try{
                 const response = await fetch(`http://localhost:3000/sum?a=${a}&b=${b}`);
                 if(!response.ok){
