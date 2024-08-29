@@ -1,6 +1,5 @@
 const express = require("express")
 const fs = require("fs");
-// const mongoose = require("mongoose");
 
 const {logReqRes} = require("./middlewares");
 const {connectMongoDb} = require("./connection");
@@ -11,7 +10,9 @@ const app = express();
 const Port = 3001;
 
 //connection
-connectMongoDb("mongodb://127.0.0.1:27017/mvc-test")
+connectMongoDb("mongodb://127.0.0.1:27017/mvc-test").then(()=>{
+    console.log("MongoDB Connected");
+})
 
 app.use(express.urlencoded({extended: false}));
 
