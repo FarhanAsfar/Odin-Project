@@ -1,5 +1,5 @@
 const User = require("../models/user");
-const users = require("./MOCK_DATA.json");
+const users = require("../MOCK_DATA.json");
 const fs = require("fs");
 
 async function handleGetAllUsers(req, res) {
