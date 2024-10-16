@@ -38,4 +38,6 @@ app.post("/signup", async (req, res) => {
   res.json({ message: "User created successfully" });
 });
 
-app.listen(3000);
+app.listen(3000, ()=>{
+  console.log("Server is running...");
+});
