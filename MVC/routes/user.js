@@ -1,11 +1,13 @@
 const express = require("express");
+const router = express.Router();
 const {
     handleGetAllUsers, 
     handleGetUserById, 
     handleUpdateUserbyId, 
     handleDeleteUserById,
-    handleCreateNewUser} = require("../controllers/user");
-const router = express.Router();
+    handleCreateNewUser
+} = require("../controllers/user");
+
 
 
 router.route("/")
