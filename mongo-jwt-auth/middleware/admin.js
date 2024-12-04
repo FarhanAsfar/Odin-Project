@@ -7,7 +7,7 @@ function adminMiddleware(req, res, next){
 
     if(!token){
         return res.status(403).json({
-            message: "No token found"
+            message: "No token found!"
         });
     }
 
@@ -28,7 +28,7 @@ function adminMiddleware(req, res, next){
         }
     } catch(err){
         res.status(403).json({
-            message: "Invalid token"
+            message: "Invalid token!"
         });
     }
 }
